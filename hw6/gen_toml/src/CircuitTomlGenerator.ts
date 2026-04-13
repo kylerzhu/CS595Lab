@@ -67,7 +67,7 @@ export class NoirCircuitTomlGenerator {
       return `
 id = "${id.toString()}"
 r = "${r.toString()}"
-oldPath = [${hashPath.map((fr) => `"${fr.toString()}"`).join(', ')}]
+hashPath = [${hashPath.map((fr) => `"${fr.toString()}"`).join(', ')}]
 oldRoot = "${oldRoot.toString()}"
 newRoot = "${newRoot.toString()}"
 commitment = "${commitment.toString()}"
@@ -90,7 +90,7 @@ index = "${idxFr.toString()}"
       return `
 r = "${r.toString()}"
 index = "${idxFr.toString()}"
-hashpath = [${hashPath.map((fr) => `"${fr.toString()}"`).join(', ')}]
+path = [${hashPath.map((fr) => `"${fr.toString()}"`).join(', ')}]
 root = "${root.toString()}"
 id = "${id.toString()}"
       `.trim();
